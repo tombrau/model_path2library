@@ -1,0 +1,4 @@
+2024-12-09 01:34:39,072 - symlink_creator - WARNING - Skipping invalid UI config for MagicQuill: 1 validation error for UIConfig
+outputs
+  field required (type=value_error.missing)
+2024-12-09 01:34:39,072 - symlink_creator - INFO - Successfully parsed and validated configuration from d:\Projects\AI\_Apps\model_path2library\configs\model_paths.yaml
