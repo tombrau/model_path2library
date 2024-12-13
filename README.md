@@ -1,6 +1,9 @@
 # AI Model Path Library Manager
 ## Stable Diffusion and other AI Models
 
+⚠️ NOTICE
+This repository is currently under development and NOT production ready. Use at your own risk.
+
 This project provides a graphical user interface (GUI) for managing model paths.  It simplifies the process of selecting and processing models, offering a user-friendly alternative to command-line interaction.
 
 ## Features
@@ -23,6 +26,43 @@ This project provides a graphical user interface (GUI) for managing model paths.
 * Python 3.x
 * `tkinter` (usually included with Python)
 * `PyYAML` (install with `pip install pyyaml`)
+
+## ToDo
+**General:**
+
+- Improve error handling by adding more specific exception handling and logging.
+- Enhance logging by adding timestamps and the function/module name to log messages.
+- Make configuration loading and parsing more flexible to handle different formats.
+- Ensure consistent code style by following PEP 8 guidelines.
+
+**Specific Tasks:**
+
+- **`model_library_gui.py`:**
+    - Implement proper error handling in the GUI.
+    - Add more informative messages to the GUI.
+    - Consider adding a progress bar for long-running tasks.
+    - Improve the `_run_script` method to handle different script types and arguments.
+    - Improve the `check_queue` method to handle different message types.
+- **`model_path2library.py`:**
+    - Improve the `process_model` function to handle different model types and actions.
+    - Improve the `prompt_user_for_model` function to handle invalid user input.
+    - Improve the `confirm_action` function to handle different action types.
+- **`utils/error_logger.py`:**
+    - Add timestamps to log messages.
+    - Add the function/module name to log messages.
+- **`utils/parse_yaml.py`:**
+    - Add support for different configuration formats (e.g., JSON).
+    - Add more robust error handling for invalid configuration files.
+- **`utils/special_folders_handler.py`:**
+    - Add more detailed logging for file copy operations.
+    - Add error handling for file copy operations.
+- **`utils/symlink_creator.py`:**
+    - Add more detailed logging for symlink creation operations.
+    - Add error handling for symlink creation operations.
+    - Improve the `move_file` and `move_directory` functions to handle different file and directory types.
+    - Improve the `rollback` function to handle different rollback types.
+    - Improve the `create_special_symlink` function to handle different symlink types.
+    - Improve the `move_contents` function to handle different file and directory types.
 
 ## Contributing
 
