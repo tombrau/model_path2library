@@ -1,5 +1,4 @@
 # File Name: model_paths.yaml
-# Rename this to extra_model_paths.yaml and ComfyUI will load it
 # generally run the AI one time for it to load defaults
 # this was true for fooocus, it requires juggernautXL_v8Rundiffusion
 # in the root models folder
@@ -10,16 +9,37 @@ version: 1.0
 # General configuration
 library_path:
     # Base path for the centralized model library
-    base_path_library: D:\Projects\AI\_models
-    base_path_outputs: D:\Projects\AI\_outputs
-    base_path_rollbacks: D:\Projects\AI\_rollbacks
+    base_path_library: D:\AI\_models
+    base_path_outputs: D:\AI\_outputs
+    base_path_rollbacks: D:\AI\_rollbacks
 
 Template:
     # Base path for the installation
     # if this folder is empty, delete it
+    # Model paths - these will create symlinks to the specified locations in base_path_library 
+    # when create_sym_links is True
+    # Format: application_folder: symlink_destination
+    # The application_folder is fixed and cannot be changed, but symlink_destination 
+    # can be modified to 
+    # point to different locations in your library
+    # model folder is D:\Projects\AI\A1111\webui\models\Stable-diffusion
+    # checkpoints: D:\Projects\AI\diSty\ComfyUI\models models/Stable-diffusion
+    # configs: models/Stable-diffusion
     base_path: D:\Projects\AI\{AI Model}\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: False
+
+    # vae: models/VAE
+    # loras: |
+    #      models/Lora
+    #      models/LyCORIS
+    # upscale_models: |
+    #               models/ESRGAN
+    #               models/RealESRGAN
+    #               models/SwinIR
+    # embeddings: embeddings
+    # hypernetworks: models/hypernetworks
+    # controlnet: models/ControlNet
 
     # Outputs path - format is: application_folder, library_location
     # if this folder is empty, delete it
@@ -30,154 +50,89 @@ a1111:
     # Base path for the A1111 installation
     # should be pointed at the models folder
     # if empty delete the models folder otherwise an error occurs
-    # requires models\Stable-diffusion\v1-5-pruned-emaonly.safetensors and will be downloaded on first run
-    base_path: D:\Projects\AI\stable-diffusion-webui\models
+    # requires models\Stable-diffusion\v1-5-pruned-emaonly.safetensors and 
+    # will be downloaded on first run
+    base_path: D:\AI\stable-diffusion-webui\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
- 
-    # Model paths - these will create symlinks to the specified locations in base_path_library when create_sym_links is True
-    # Format: application_folder: symlink_destination
-    # The application_folder is fixed and cannot be changed, but symlink_destination can be modified to 
-    # point to different locations in your library
-    # model folder is D:\Projects\AI\A1111\webui\models\Stable-diffusion
-    # checkpoints: D:\Projects\AI\diSty\ComfyUI\models models/Stable-diffusion
-    # configs: models/Stable-diffusion
+
     # handle special cases
     special_folders:
         stable-diffusion: Checkpoints
         lora: loras
-
-    # vae: models/VAE
-    # loras: |
-    #      models/Lora
-    #      models/LyCORIS
-    # upscale_models: |
-    #               models/ESRGAN
-    #               models/RealESRGAN
-    #               models/SwinIR
-    # embeddings: embeddings
-    # hypernetworks: models/hypernetworks
-    # controlnet: models/ControlNet
     
     # Outputs path - format is different: application_folder, library_location
     # This allows output to be stored in a different drive or location
     # special symlinks
-    outputs: outputs,D:\Projects\AI\stable-diffusion-webui\
+    outputs: outputs,D:\AI\stable-diffusion-webui\
 
 # Configuration for Stable Diffusion Web UI Forge
 Forge:
-    # Base path for the A1111 installation
-    # should be pointed at the models folder
-    # if empty delete the models folder otherwise an error occurs
-    # requires models\Stable-diffusion\v1-5-pruned-emaonly.safetensors and will be downloaded on first run
-    base_path: D:\Projects\AI\stable-diffusion-webui-forge\models
+    # Base path for the forge installation
+    base_path: D:\AI\stable-diffusion-webui-forge\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
- 
-    # Model paths - these will create symlinks to the specified locations in base_path_library when create_sym_links is True
-    # Format: application_folder: symlink_destination
-    # The application_folder is fixed and cannot be changed, but symlink_destination can be modified to 
-    # point to different locations in your library
-    # model folder is D:\Projects\AI\A1111\webui\models\Stable-diffusion
-    # checkpoints: D:\Projects\AI\diSty\ComfyUI\models models/Stable-diffusion
-    # configs: models/Stable-diffusion
+
     # handle special cases
     special_folders:
         stable-diffusion: Checkpoints
         lora: loras
 
-    # vae: models/VAE
-    # loras: |
-    #      models/Lora
-    #      models/LyCORIS
-    # upscale_models: |
-    #               models/ESRGAN
-    #               models/RealESRGAN
-    #               models/SwinIR
-    # embeddings: embeddings
-    # hypernetworks: models/hypernetworks
-    # controlnet: models/ControlNet
-    
-    # Outputs path - format is different: application_folder, library_location
-    # This allows output to be stored in a different drive or location
     # special symlinks
-    outputs: outputs,D:\Projects\AI\stable-diffusion-webui-forge\
+    outputs: outputs,D:\AI\stable-diffusion-webui-forge\
 
 # Configuration for ComfyUI
 comfyui:
     # Base path for the ComfyUI installation
-    base_path: D:\Projects\AI\Comfy_Container\ComfyUI\models
+    base_path: D:\AI\Comfy_Container\ComfyUI\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
     
     # Outputs path - format is: application_folder, library_location
-    outputs: outputs,D:\Projects\AI\_Outputs\comfyui\
+    outputs: outputs,D:\AI\_Outputs\comfyui\
 
 # Configuration for Fooocus
 Fooocus:
     # Base path for the Fooocus installation
-    base_path: D:\Projects\AI\Fooocus\Fooocus\models
+    base_path: D:\AI\Fooocus\Fooocus\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
 
     # Outputs path - format is: application_folder, library_location
-    outputs: outputs,D:\Projects\AI\Fooocus\Fooocus\outputs
+    outputs: outputs,D:\AI\Fooocus\Fooocus\outputs
 
 comfyui_portable:
     # Base path for the ComfyUI installation
-    base_path: D:\Projects\AI\ComfyUI\ComfyUI\models
+    base_path: D:\AI\ComfyUI\ComfyUI\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
 
     # Outputs path - format is: application_folder, library_location
-    outputs: output,D:\Projects\AI\_outputs\comfyui
+    outputs: output,D:\AI\_outputs\comfyui
 
 # Configuration for DeFooocus:
 
 DeFooocus:
     # Base path for the DeFooocus installation
-    base_path: D:\Projects\AI\DeFooocus\DeFooocus\models
+    base_path: D:\AI\DeFooocus\DeFooocus\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
 
     # Outputs path - format is: application_folder, library_location
-    outputs: outputs,D:\Projects\AI\DeFooocus\DeFooocus\outputs
+    outputs: outputs,D:\AI\DeFooocus\DeFooocus\outputs
 
 # Configuration for MagicQuill
 MagicQuill:
     # Base path for the MagicQuill installation
     # should be pointed at the models folder
     # if empty delete the models folder otherwise an error occurs
-    base_path: D:\Projects\AI\MagicQuill\models\checkpoints
+    base_path: D:\AI\MagicQuill\models\checkpoints
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
- 
-    # Model paths - these will create symlinks to the specified locations in base_path_library when create_sym_links is True
-    # Format: application_folder: symlink_destination
-    # The application_folder is fixed and cannot be changed, but symlink_destination can be modified to 
-    # point to different locations in your library
-    # model folder is D:\Projects\AI\A1111\webui\models\Stable-diffusion
-    # checkpoints: D:\Projects\AI\diSty\ComfyUI\models models/Stable-diffusion
-    # configs: models/Stable-diffusion
+
     # handle special cases
     special_folders:
         stable-diffusion: Checkpoints
         controlnet: controlnet
         inpaint: inpaint
-
-    # vae: models/VAE
-    # loras: |
-    #      models/Lora
-    #      models/LyCORIS
-    # upscale_models: |
-    #               models/ESRGAN
-    #               models/RealESRGAN
-    #               models/SwinIR
-    # embeddings: embeddings
-    # hypernetworks: models/hypernetworks
-    # controlnet: models/ControlNet
-    
-    # Outputs path - format is different: application_folder, library_location
-    # This allows output to be stored in a different drive or location
-    # special symlinks
-    # outputs: outputs,D:\Projects\AI\stable-diffusion-webui\    
+  
