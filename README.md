@@ -35,8 +35,54 @@ This project provides a graphical user interface (GUI) for managing model paths.
 - Make configuration loading and parsing more flexible to handle different formats.
 - Ensure consistent code style by following PEP 8 guidelines.
 
-**Specific Tasks:**
+## 0: Add environment setup
+- [ ] Create a virtual environment
 
+## 1: Add Progress Bars and Status Updates
+- [ ] Add progress bar widgets to GUI
+   - [ ] Overall progress bar
+   - [ ] Current file progress bar
+   - [ ] Status labels for current operation
+
+- [ ] Create a ProgressManager class to track:
+   - [ ] Total number of files
+   - [ ] Total size to process
+   - [ ] Current file progress
+   - [ ] Overall progress
+   - [ ] Estimated time remaining
+
+- [ ] Modify file operations to report progress:
+   - [ ] Implement chunked file copying
+   - [ ] Add progress callbacks
+   - [ ] Track individual file progress
+
+## 2: Implement Enhanced Communication
+- [ ] Create a custom queue for progress updates containing:
+   - [ ] Operation type
+   - [ ] Current file
+   - [ ] Progress percentage
+   - [ ] Speed
+   - [ ] Estimated time remaining
+
+- [ ] Implement more frequent UI updates:
+   - [ ] Reduce queue check interval
+   - [ ] Add separate queues for logs and progress
+   - [ ] Implement cancelation capability
+
+## 3: UI Improvements
+- [ ] Add detailed status display:
+   - [ ] Current operation
+   - [ ] File being processed
+   - [ ] Speed
+   - [ ] Time remaining
+   - [ ] Total size/processed size
+
+- [ ] Implement operation controls:
+   - [ ] Cancel button
+   - [ ] Pause/Resume capability
+   - [ ] Clear completed operations
+
+**Specific Tasks:**
 - **`model_library_gui.py`:**
     - Implement proper error handling in the GUI.
     - Add more informative messages to the GUI.
