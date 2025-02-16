@@ -36,7 +36,7 @@ This project provides a graphical user interface (GUI) for managing model paths.
 - Ensure consistent code style by following PEP 8 guidelines.
 
 ## 0: Add environment setup
-- [ ] Create a virtual environment
+- [x] Create a virtual environment
 
 ## 1: Add Progress Bars and Status Updates
 - [ ] Add progress bar widgets to GUI
