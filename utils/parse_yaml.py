@@ -62,6 +62,7 @@ def parse_model_paths(file_path: str) -> Config:
         
         # Check version
         version = Version(**{'version': config_dict.get('version', '1.0')})
+        ### version = Version(**{'version': config_dict.get('version', "1.0")})
         if version.version != '1.0':
             log_warning(f"Unsupported configuration version: {version.version}. Attempting to parse anyway.")
         

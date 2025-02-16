@@ -103,7 +103,7 @@ Fooocus:
 
 comfyui_portable:
     # Base path for the ComfyUI installation
-    base_path: D:\AI\ComfyUI\ComfyUI\models
+    base_path: D:\AI\ComfyUI_windows_portable\ComfyUI\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
 
@@ -126,13 +126,16 @@ MagicQuill:
     # Base path for the MagicQuill installation
     # should be pointed at the models folder
     # if empty delete the models folder otherwise an error occurs
-    base_path: D:\AI\MagicQuill\models\checkpoints
+    base_path: D:\AI\MagicQuill\models
     # Set to True to create symlinks, False to use the application's own library
     create_sym_links: True
 
     # handle special cases
-    special_folders:
-        stable-diffusion: Checkpoints
-        controlnet: controlnet
-        inpaint: inpaint
+    # special_folders:
+    #    stable-diffusion: Checkpoints
+    #    controlnet: controlnet
+    #    inpaint: inpaint
+
+    # Outputs path - format is: application_folder, library_location
+    outputs: outputs,D:\AI\MagicQuill\outputs    
   

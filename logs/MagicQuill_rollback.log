@@ -1,0 +1,9 @@
+2025-02-16T21:48:08.151946: Rollback preparation completed
+2025-02-16T21:48:08.151946: Models: Starting to process D:\AI\MagicQuill\models
+2025-02-16T21:48:08.159946: Moved contents from D:\AI\MagicQuill\models to D:\AI\_models
+2025-02-16T21:48:08.159946: Deleted directory: D:\AI\MagicQuill\models
+2025-02-16T21:48:08.160946: Created symlink: D:\AI\MagicQuill\models -> D:\AI\_models
+2025-02-16T21:48:08.160946: Outputs: Starting to process D:\AI\MagicQuill\outputs
+2025-02-16T21:48:08.160946: Source folder is empty or doesn't exist: D:\AI\MagicQuill\outputs
+2025-02-16T21:48:08.160946: Created symlink: D:\AI\MagicQuill\outputs -> D:\AI\_outputs\MagicQuill
+2025-02-16T21:48:08.160946: All operations completed successfully

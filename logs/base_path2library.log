@@ -1,0 +1,20 @@
+2025-02-16 21:48:08,143 - symlink_creator - INFO - Script execution started
+2025-02-16 21:48:08,148 - symlink_creator - INFO - Successfully parsed and validated configuration from d:\AI\_Apps\model_path2library\configs\model_paths.yaml
+2025-02-16 21:48:08,148 - symlink_creator - INFO - Configuration parsed successfully from d:\AI\_Apps\model_path2library\configs\model_paths.yaml
+2025-02-16 21:48:08,148 - symlink_creator - INFO - Processing model: MagicQuill 
+2025-02-16 21:48:08,148 - symlink_creator - INFO - Starting create_symlinks for MagicQuill 
+2025-02-16 21:48:08,148 - symlink_creator - INFO - UI config for MagicQuill: base_path='D:\\AI\\MagicQuill\\models' create_sym_links=True outputs='outputs,D:\\AI\\MagicQuill\\outputs' special_folders={} checkpoints=None configs=None vae=None loras=None upscale_models=None embeddings=None hypernetworks=None controlnet=None
+2025-02-16 21:48:08,148 - symlink_creator - INFO - Base path for MagicQuill: D:\AI\MagicQuill\models
+2025-02-16 21:48:08,150 - symlink_creator - INFO - Backed up: D:\AI\MagicQuill\models to D:\AI\_rollbacks\MagicQuill\rollback_20250216_214808\models
+2025-02-16 21:48:08,151 - symlink_creator - INFO - Backed up: D:\AI\MagicQuill\outputs to D:\AI\_rollbacks\MagicQuill\rollback_20250216_214808\outputs
+2025-02-16 21:48:08,151 - symlink_creator - INFO - Rollback prepared at: D:\AI\_rollbacks\MagicQuill\rollback_20250216_214808
+2025-02-16 21:48:08,151 - symlink_creator - INFO - Models: Processing D:\AI\MagicQuill\models to D:\AI\_models...
+2025-02-16 21:48:08,151 - symlink_creator - INFO - Moving contents from D:\AI\MagicQuill\models to D:\AI\_models...
+2025-02-16 21:48:08,159 - symlink_creator - INFO - Deleted directory: D:\AI\MagicQuill\models
+2025-02-16 21:48:08,159 - symlink_creator - INFO - Creating symlink: D:\AI\MagicQuill\models -> D:\AI\_models
+2025-02-16 21:48:08,160 - symlink_creator - INFO - Outputs: Processing D:\AI\MagicQuill\outputs to D:\AI\_outputs\MagicQuill...
+2025-02-16 21:48:08,160 - symlink_creator - INFO - Source folder is empty or doesn't exist: D:\AI\MagicQuill\outputs
+2025-02-16 21:48:08,160 - symlink_creator - INFO - Creating symlink: D:\AI\MagicQuill\outputs -> D:\AI\_outputs\MagicQuill
+2025-02-16 21:48:08,160 - symlink_creator - INFO - All operations completed successfully
+2025-02-16 21:48:08,161 - symlink_creator - INFO - Processing completed successfully.
+2025-02-16 21:48:08,161 - symlink_creator - INFO - Script execution ended
