@@ -2,7 +2,7 @@
 ## Stable Diffusion and other AI Models
 
 ⚠️ NOTICE
-This repository is currently under development and NOT production ready. Use at your own risk.
+Use at your own risk.
 
 This project provides a graphical user interface (GUI) for managing model paths.  It simplifies the process of selecting and processing models, offering a user-friendly alternative to command-line interaction.
 
