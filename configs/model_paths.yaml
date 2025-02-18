@@ -10,6 +10,7 @@ version: 1.0
 library_path:
     # Base path for the centralized model library
     base_path_library: D:\AI\_models
+    
     base_path_outputs: D:\AI\_outputs
     base_path_rollbacks: D:\AI\_rollbacks
 
@@ -111,7 +112,6 @@ comfyui_portable:
     outputs: output,D:\AI\_outputs\comfyui
 
 # Configuration for DeFooocus:
-
 DeFooocus:
     # Base path for the DeFooocus installation
     base_path: D:\AI\DeFooocus\DeFooocus\models

@@ -1,0 +1,61 @@
+# File Name: model_paths.yaml
+# Configuration version
+version: 1.0
+RollBacks:
+  base_path_rollbacks: "D:\\AI\\_rollbacks"
+library_path:
+  base_path_library: "D:\\AI\\_models"
+  base_path_outputs: "D:\\AI\\_outputs"
+  # Pinokio install
+  Pinokio_path_library: "D:\\AI\\pinokio\\api"
+  Pinokio_path_outputs: "D:\\AI\\pinokio\\api"
+  # Stability Matrix install
+  Stability_path_library: "D:\\AI\\StabilityMatrix\\Data"
+  Stability_path_outputs: "D:\\AI\\StabilityMatrix\\Data"
+  # General install
+  General_path_library: "D:\\AI\\ComfyUI_windows_portable\\ComfyUI\\models"
+  General_path_outputs: "D:\\AI\\ComfyUI_windows_portable\\ComfyUI\\output"
+
+HunyuanVideo:
+  # Base path for the pinokio-HunyuanVideo installation
+  Installer: "Pinokio"
+  Package: "hunyuanvideo.git"
+  create_sym_links: true
+  version: "1.0"             # Application version
+  description: "Hunyuan video"  # Application description  
+  base_path:
+    - source: "{Pinokio_path_library}\\{Package}\\app\\ckpts"
+      target: "{base_path_library}\\ckpts"
+
+  outputs:
+    - source: "{Pinokio_path_outputs}\\{Package}\\app\\gradio_outputs"
+      target: "{base_path_outputs}\\HunyuanVideo"
+
+A1111:
+  # Base path for the a1111 installation
+  Installer: "Pinokio"
+  Package: "automatic1111.git"
+  create_sym_links: true
+  base_path:
+    - source: "{Pinokio_path_library}\\{Package}\\app\\models"
+      target: "{base_path_library}"
+  outputs:
+    - source: "{Pinokio_path_outputs}\\{Package}\\app\\outputs"
+      target: "D:\\AI\\_outputs\\{Package}"
+
+SD:
+  Installer: "StabilityMatrix"
+  Package: "SD.Next"
+  create_sym_links: true
+  base_path:
+    - source: "{Stability_path_library}\\models"
+      target: "{base_path_library}"
+    - source: "{Stability_path_library}\\Packages\\{Package}\\models"
+      target: "D:\\AI\\_models"
+  outputs:
+    - source: "{Stability_path_library}\\images"
+      target: "D:\\AI\\_outputs\\{Package}"
+    - source: "{Stability_path_library}\\Packages\\{Package}\\outputs"
+      target: "{base_path_outputs}\\{Package}"
+
+  
