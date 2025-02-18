@@ -4,7 +4,7 @@
 ⚠️ NOTICE
 - Use at your own risk.
 - Don't use dev_version_2, its under a rewrite and will not work.
-
+----
 This project provides a graphical user interface (GUI) for managing model paths.  It simplifies the process of selecting and processing models, offering a user-friendly alternative to command-line interaction.
 
 ## Features
